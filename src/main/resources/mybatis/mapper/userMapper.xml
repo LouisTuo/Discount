@@ -50,26 +50,28 @@ userMapper(userMapper.xml文件去除后缀)保证唯一性
     <sql id="base_column">
         id,name,age,_address
   </sql>
+
     <!-- 查询-->
-    <select id="getUser" parameterType="int"
-            resultType="com.geekq.miaosha.mybatis.entity.User">
-        select * from users where id=#{id}
+    <select id="getUser" parameterType="int" resultType="com.geekq.miaosha.mybatis.entity.User">
+        select * from user where id = #{id}
     </select>
 
     <select id="getUserList" resultType="com.geekq.miaosha.mybatis.entity.User">
-        select <include refid="base_column" />
-        from users where 1=1
-       <if test="id != null and id !=''">
-           and id=#{id}
-       </if>
+        select
+        <include refid="base_column"/>
+        from user where 1=1
+        <if test="id != null and id !=''">
+            and id=#{id}
+        </if>
         <if test="name != null and name !=''">
             and name=#{name}
         </if>
     </select>
 
     <select id="getUserListMap" resultMap="userResultMap">
-        select <include refid="base_column" />
-        from users where 1=1
+        select
+        <include refid="base_column"/>
+        from user where 1=1
         <if test="id != null and id !=''">
             and id=#{id}
         </if>
@@ -79,14 +81,14 @@ userMapper(userMapper.xml文件去除后缀)保证唯一性
     </select>
 
     <select id="getTeacherAndUser" resultMap="TandUResultMap">
-       select * from users u, teacher t where u.id = t.u_id and  t.u_id=#{uId}
+       select * from user u, teacher t where u.id = t.u_id and  t.u_id=#{uId}
     </select>
 
 
     <select id="getTeacherAndUserList" resultMap="TandUResultMap">
-       select * from users u, teacher t where u.id = t.u_id and  t.u_id in
+        select * from user u, teacher t where u.id = t.u_id and t.u_id in
         <!--<foreach item="item" collection="list" separator=",">-->
-            <!--(#{item.username}, #{item.password}, #{item.email}, #{item.bio})-->
+        <!--(#{item.username}, #{item.password}, #{item.email}, #{item.bio})-->
         <!--</foreach>-->
 
         <foreach collection="uId" close=")" open="(" item="item" separator=",">
@@ -98,19 +100,19 @@ userMapper(userMapper.xml文件去除后缀)保证唯一性
     <!-- 插入自动递增-->
     <insert id="insert" parameterType="com.geekq.miaosha.mybatis.entity.User"
             useGeneratedKeys="true" keyProperty="id">
-        insert users (id,name,age) value (#{id},#{name},#{age})
+        insert user (id,name,age) value (#{id},#{name},#{age})
     </insert>
 
 
     <!-- update-->
     <update id="update" parameterType="com.geekq.miaosha.mybatis.entity.User"
             keyProperty="id">
-        update users  set name=#{name},age=#{age} ,_address=#{address} where id=#{id}
+        update user  set name=#{name},age=#{age} ,_address=#{address} where id=#{id}
     </update>
 
     <!-- update-->
     <update id="delete" parameterType="int">
-        delete  from users  where id=#{id}
+        delete  from user where id=#{id}
     </update>
 
 </mapper>

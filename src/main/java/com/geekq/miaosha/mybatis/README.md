@@ -6,9 +6,10 @@
      4.事物的控制<br>
      
 ### 如何获得sqlsession?
+
  1. 配置文件获取数据库链接相关信息<br>
- 2.通过配置文件来构建sqlsessionfactory<br>
- 3.通过sqlsessionfactory打开数据库会话<br>
+ 2. 通过配置文件来构建sqlsessionfactory<br>
+ 3. 通过sqlsessionfactory打开数据库会话<br>
 
 
 
