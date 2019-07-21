@@ -1,17 +1,17 @@
-//package com.geekq.miaosha.redis;
+// package com.geekq.miaosha.redis;
 //
-//import org.redisson.api.*;
-//import org.redisson.config.Config;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.stereotype.Service;
+// import org.redisson.api.*;
+// import org.redisson.config.Config;
+// import org.springframework.beans.factory.annotation.Autowired;
+// import org.springframework.stereotype.Service;
 //
-//import java.io.IOException;
+// import java.io.IOException;
 //
-///**
+/// **
 // * redisson操作类
 // */
-//@Service("redissonService")
-//public class RedissonService {
+// @Service("redissonService")
+// public class RedissonService {
 //
 //    @Autowired
 //    private RedissonClient redissonClient;
@@ -143,4 +143,4 @@
 //        return rCountDownLatch;
 //    }
 //
-//}
+// }

@@ -14,19 +14,14 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 @NoArgsConstructor
 public class LoginVo {
-    @NotNull
-    @MobileCheck
-    private String mobile ;
+  @NotNull @MobileCheck private String mobile;
 
-    @NotNull
-    @Length(min=32)
-    private String password;
+  @NotNull
+  @Length(min = 32)
+  private String password;
 
-    @Override
-    public String toString() {
-        return "LoginVo{" +
-                "mobile='" + mobile + '\'' +
-                ", password='" + password + '\'' +
-                '}';
-    }
+  @Override
+  public String toString() {
+    return "LoginVo{" + "mobile='" + mobile + '\'' + ", password='" + password + '\'' + '}';
+  }
 }

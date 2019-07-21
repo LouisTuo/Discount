@@ -3,60 +3,58 @@ package dto;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
-/**
- *  dto 不包含业务逻辑    pojo  对应表数据 vo  把指定页面的所有数据封装起来
- */
+/** dto 不包含业务逻辑 pojo 对应表数据 vo 把指定页面的所有数据封装起来 */
 public class CapitalTradeOrderDto implements Serializable {
 
-    private static final long serialVersionUID = 6627401903410124642L;
-    
-    private long selfUserId;
+  private static final long serialVersionUID = 6627401903410124642L;
 
-    private long oppositeUserId;
+  private long selfUserId;
 
-    private String orderTitle;
+  private long oppositeUserId;
 
-    private String merchantOrderNo;
+  private String orderTitle;
 
-    private BigDecimal amount;
+  private String merchantOrderNo;
 
-    public long getSelfUserId() {
-        return selfUserId;
-    }
+  private BigDecimal amount;
 
-    public void setSelfUserId(long selfUserId) {
-        this.selfUserId = selfUserId;
-    }
+  public long getSelfUserId() {
+    return selfUserId;
+  }
 
-    public long getOppositeUserId() {
-        return oppositeUserId;
-    }
+  public void setSelfUserId(long selfUserId) {
+    this.selfUserId = selfUserId;
+  }
 
-    public void setOppositeUserId(long oppositeUserId) {
-        this.oppositeUserId = oppositeUserId;
-    }
+  public long getOppositeUserId() {
+    return oppositeUserId;
+  }
 
-    public String getOrderTitle() {
-        return orderTitle;
-    }
+  public void setOppositeUserId(long oppositeUserId) {
+    this.oppositeUserId = oppositeUserId;
+  }
 
-    public void setOrderTitle(String orderTitle) {
-        this.orderTitle = orderTitle;
-    }
+  public String getOrderTitle() {
+    return orderTitle;
+  }
 
-    public String getMerchantOrderNo() {
-        return merchantOrderNo;
-    }
+  public void setOrderTitle(String orderTitle) {
+    this.orderTitle = orderTitle;
+  }
 
-    public void setMerchantOrderNo(String merchantOrderNo) {
-        this.merchantOrderNo = merchantOrderNo;
-    }
+  public String getMerchantOrderNo() {
+    return merchantOrderNo;
+  }
 
-    public BigDecimal getAmount() {
-        return amount;
-    }
+  public void setMerchantOrderNo(String merchantOrderNo) {
+    this.merchantOrderNo = merchantOrderNo;
+  }
 
-    public void setAmount(BigDecimal amount) {
-        this.amount = amount;
-    }
+  public BigDecimal getAmount() {
+    return amount;
+  }
+
+  public void setAmount(BigDecimal amount) {
+    this.amount = amount;
+  }
 }
