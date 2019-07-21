@@ -17,6 +17,9 @@ import javax.validation.Valid;
 
 import static com.geekq.miaosha.common.Constanst.COUNTLOGIN;
 
+/**
+ * 登录Controller
+ */
 @Controller
 @RequestMapping("/login")
 public class LoginController {

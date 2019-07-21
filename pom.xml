@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.geekq</groupId>
-    <artifactId>miaosha</artifactId>
+    <artifactId>discount</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -13,7 +13,7 @@
         <version>1.5.8.RELEASE</version>
     </parent>
 
-    <name>miaosha</name>
+    <name>discount</name>
     <url>http://maven.apache.org</url>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -72,6 +72,7 @@
             <artifactId>guava</artifactId>
             <version>18.0</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -208,9 +209,7 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
-
 
         <resources>
             <resource>
