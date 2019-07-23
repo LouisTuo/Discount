@@ -2,18 +2,28 @@ package com.geekq.miaosha.validator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
-import java.lang.annotation.*;
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
-@Target({ElementType.METHOD, ElementType.FIELD, ElementType.ANNOTATION_TYPE, ElementType.CONSTRUCTOR, ElementType.PARAMETER})
+@Target({
+  ElementType.METHOD,
+  ElementType.FIELD,
+  ElementType.ANNOTATION_TYPE,
+  ElementType.CONSTRUCTOR,
+  ElementType.PARAMETER
+})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Constraint(validatedBy = {MobileValidator.class})
 public @interface MobileCheck {
-    boolean required() default true ;
+  boolean required() default true;
 
-    String message() default "手机号码格式有误!";
+  String message() default "手机号码格式有误!";
 
-    Class<?>[] groups() default {};
+  Class<?>[] groups() default {};
 
-    Class<? extends Payload>[] payload() default {};
+  Class<? extends Payload>[] payload() default {};
 }

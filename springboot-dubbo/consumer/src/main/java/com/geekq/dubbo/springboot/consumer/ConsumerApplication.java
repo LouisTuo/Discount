@@ -10,19 +10,20 @@ import org.springframework.context.ConfigurableApplicationContext;
 @EnableDubboConfiguration
 public class ConsumerApplication {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        ConfigurableApplicationContext run =
-                SpringApplication.run(ConsumerApplication.class, args);
+    ConfigurableApplicationContext run = SpringApplication.run(ConsumerApplication.class, args);
 
-//        QuickstartConsumer quickstartConsumer = (QuickstartConsumer)run.getBean("quickstartConsumer");
+    //        QuickstartConsumer quickstartConsumer =
+    // (QuickstartConsumer)run.getBean("quickstartConsumer");
 
-//        quickstartConsumer.sendMessage("童鞋们都能找到一个百万年薪的工作");
+    //        quickstartConsumer.sendMessage("童鞋们都能找到一个百万年薪的工作");
 
-        // 测试分布式事务使用
-        TransactionConsumer transactionConsumer = (TransactionConsumer) run.getBean("transactionConsumer");
-        transactionConsumer.sendMessage("4,5");
-        // 1,2,3   4,5
+    // 测试分布式事务使用
+    TransactionConsumer transactionConsumer =
+        (TransactionConsumer) run.getBean("transactionConsumer");
+    transactionConsumer.sendMessage("4,5");
+    // 1,2,3   4,5
 
-    }
+  }
 }

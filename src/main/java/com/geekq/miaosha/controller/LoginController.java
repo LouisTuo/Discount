@@ -17,43 +17,40 @@ import javax.validation.Valid;
 
 import static com.geekq.miaosha.common.Constanst.COUNTLOGIN;
 
-/**
- * 登录Controller
- */
+/** 登录Controller */
 @Controller
 @RequestMapping("/login")
 public class LoginController {
 
-    private static Logger logger = LoggerFactory.getLogger(LoginController.class);
+  private static Logger logger = LoggerFactory.getLogger(LoginController.class);
 
-    @Autowired
-    private MiaoShaUserService userService;
+  @Autowired private MiaoShaUserService userService;
 
-    @RequestMapping("/to_login")
-    public String tologin(LoginVo loginVo, Model model) {
-        logger.info(loginVo.toString());
-        //未完成
-        RedisLua.vistorCount(COUNTLOGIN);
-        String count = RedisLua.getVistorCount(COUNTLOGIN).toString();
-        logger.info("访问网站的次数为:{}", count);
-        model.addAttribute("count", count);
-        return "login";
-    }
+  @RequestMapping("/to_login")
+  public String tologin(LoginVo loginVo, Model model) {
+    logger.info(loginVo.toString());
+    // 未完成
+    RedisLua.vistorCount(COUNTLOGIN);
+    String count = RedisLua.getVistorCount(COUNTLOGIN).toString();
+    logger.info("访问网站的次数为:{}", count);
+    model.addAttribute("count", count);
+    return "login";
+  }
 
-    @RequestMapping("/do_login")
-    @ResponseBody
-    public ResultGeekQ<Boolean> dologin(HttpServletResponse response, @Valid LoginVo loginVo) {
-        ResultGeekQ<Boolean> result = ResultGeekQ.build();
-        logger.info(loginVo.toString());
-        userService.login(response, loginVo);
-        return result;
-    }
+  @RequestMapping("/do_login")
+  @ResponseBody
+  public ResultGeekQ<Boolean> dologin(HttpServletResponse response, @Valid LoginVo loginVo) {
+    ResultGeekQ<Boolean> result = ResultGeekQ.build();
+    logger.info(loginVo.toString());
+    userService.login(response, loginVo);
+    return result;
+  }
 
-    @RequestMapping("/create_token")
-    @ResponseBody
-    public String createToken(HttpServletResponse response, @Valid LoginVo loginVo) {
-        logger.info(loginVo.toString());
-        String token = userService.createToken(response, loginVo);
-        return token;
-    }
+  @RequestMapping("/create_token")
+  @ResponseBody
+  public String createToken(HttpServletResponse response, @Valid LoginVo loginVo) {
+    logger.info(loginVo.toString());
+    String token = userService.createToken(response, loginVo);
+    return token;
+  }
 }

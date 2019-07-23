@@ -8,8 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @EnableDubboConfiguration
 public class PrivoderApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(PrivoderApplication.class, args);
-
-    }
+  public static void main(String[] args) {
+    SpringApplication.run(PrivoderApplication.class, args);
+  }
 }

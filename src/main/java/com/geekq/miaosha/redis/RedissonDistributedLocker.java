@@ -1,11 +1,11 @@
-//package com.geekq.miaosha.redis;
+// package com.geekq.miaosha.redis;
 //
-//import org.redisson.api.RLock;
-//import org.redisson.api.RedissonClient;
+// import org.redisson.api.RLock;
+// import org.redisson.api.RedissonClient;
 //
-//import java.util.concurrent.TimeUnit;
+// import java.util.concurrent.TimeUnit;
 //
-//public class RedissonDistributedLocker implements DistributedLocker {
+// public class RedissonDistributedLocker implements DistributedLocker {
 //
 //    private RedissonClient redissonClient;
 //
@@ -36,4 +36,4 @@
 //    public void setRedissonClient(RedissonClient redissonClient) {
 //        this.redissonClient = redissonClient;
 //    }
-//}
+// }

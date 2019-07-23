@@ -5,15 +5,11 @@ import org.mengyun.tcctransaction.api.Compensable;
 
 import java.math.BigDecimal;
 
-/**
- * @author qiurunze
- */
+/** @author qiurunze */
 public interface CapAccountTradeOrderService {
 
+  BigDecimal getCapAccountByUserId(Long userId);
 
-    BigDecimal getCapAccountByUserId(Long userId );
-
-    @Compensable
-    public String record(CapitalTradeOrderDto tradeOrderDto);
-
+  @Compensable
+  public String record(CapitalTradeOrderDto tradeOrderDto);
 }

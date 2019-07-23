@@ -1,9 +1,9 @@
-//package com.geekq.miaosha.redis;
+// package com.geekq.miaosha.redis;
 //
-//import org.springframework.boot.context.properties.ConfigurationProperties;
+// import org.springframework.boot.context.properties.ConfigurationProperties;
 //
-//@ConfigurationProperties(prefix = "redisson")
-//public class RedissonProperties {
+// @ConfigurationProperties(prefix = "redisson")
+// public class RedissonProperties {
 //
 //    private int timeout = 3000;
 //
@@ -94,5 +94,5 @@
 //    public void setConnectionMinimumIdleSize(int connectionMinimumIdleSize) {
 //        this.connectionMinimumIdleSize = connectionMinimumIdleSize;
 //    }
-//}
+// }
 //

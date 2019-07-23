@@ -9,37 +9,34 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-/**
- * 消息中心主体表
- */
+/** 消息中心主体表 */
 @Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
 public class MiaoShaMessageInfo implements Serializable {
 
-    private Integer id ;
+  private Integer id;
 
-    private Long messageId ;
+  private Long messageId;
 
-    private Long userId ;
+  private Long userId;
 
-    private String content ;
+  private String content;
 
-    private Date createTime;
+  private Date createTime;
 
-    private Integer status ;
+  private Integer status;
 
-    private Date overTime ;
+  private Date overTime;
 
-    private Integer messageType ;
+  private Integer messageType;
 
-    private Integer sendType ;
+  private Integer sendType;
 
-    private String goodName ;
+  private String goodName;
 
-    private BigDecimal price ;
+  private BigDecimal price;
 
-    private String messageHead ;
-
+  private String messageHead;
 }

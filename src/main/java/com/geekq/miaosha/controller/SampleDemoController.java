@@ -1,6 +1,5 @@
 package com.geekq.miaosha.controller;
 
-import com.geekq.miaosha.common.resultbean.ResultGeekQ;
 import com.geekq.miaosha.domain.User;
 import com.geekq.miaosha.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,26 +16,26 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping("/demo")
 public class SampleDemoController {
-    /*@Autowired
-    private UserService userService;*/
+  /*@Autowired
+  private UserService userService;*/
 
-    private UserService userService;
+  private UserService userService;
 
-    @Autowired
-    public void setUserService(UserService userService) {
-        this.userService = userService;
-    }
+  @Autowired
+  public void setUserService(UserService userService) {
+    this.userService = userService;
+  }
 
-    @RequestMapping("/queryAdminUser")
-    @ResponseBody
-    public String queryUser() {
-        User user = userService.getById(1);
-        return user.getName();
-    }
+  @RequestMapping("/queryAdminUser")
+  @ResponseBody
+  public String queryUser() {
+    User user = userService.getById(1);
+    return user.getName();
+  }
 
-    @RequestMapping("/insertUser")
-    @ResponseBody
-    public boolean insertUser() {
-            return userService.insertUser();
-    }
+  @RequestMapping("/insertUser")
+  @ResponseBody
+  public boolean insertUser() {
+    return userService.insertUser();
+  }
 }

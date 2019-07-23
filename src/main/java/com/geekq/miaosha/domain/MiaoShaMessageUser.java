@@ -8,23 +8,20 @@ import lombok.Setter;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * 消息中心用戶存储关系表
- */
+/** 消息中心用戶存储关系表 */
 @Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
 public class MiaoShaMessageUser implements Serializable {
 
-    private Long id ;
+  private Long id;
 
-    private Long userId ;
+  private Long userId;
 
-    private Long messageId ;
+  private Long messageId;
 
-    private String goodId ;
+  private String goodId;
 
-    private Date orderId;
-
+  private Date orderId;
 }
